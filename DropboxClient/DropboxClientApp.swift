@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct DropboxClientApp: App {
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import SwiftyDropbox
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Spacer()
+        VStack {
+            Button("Log In") {
+                authButtonTapped()
+            }
+        }
+        Spacer()
     }
+}
+
+func authButtonTapped() {
+    let scopeRequest = ScopeRequest(scopeType: .user, scopes: ["account_info.read"], includeGrantedScopes: false)
+        DropboxClientsManager.authorizeFromControllerV2(
+            UIApplication.shared,
+            controller: nil,
+            loadingStatusDelegate: nil,
+            openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
+            scopeRequest: scopeRequest
+        )
 }
 
 struct ContentView_Previews: PreviewProvider {

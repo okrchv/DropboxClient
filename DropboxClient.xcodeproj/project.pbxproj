@@ -11,6 +11,9 @@
 		50544F412A17B8CE0068097E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50544F402A17B8CE0068097E /* ContentView.swift */; };
 		50544F432A17B8D30068097E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50544F422A17B8D30068097E /* Assets.xcassets */; };
 		50544F462A17B8D30068097E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50544F452A17B8D30068097E /* Preview Assets.xcassets */; };
+		50544F4E2A17BC520068097E /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = 50544F4D2A17BC520068097E /* SwiftyDropbox */; };
+		50544F512A17BFA90068097E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50544F502A17BFA90068097E /* AppDelegate.swift */; };
+		50544F532A1BF69F0068097E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50544F522A1BF69F0068097E /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		50544F402A17B8CE0068097E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50544F422A17B8D30068097E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50544F452A17B8D30068097E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		50544F4F2A17BCC60068097E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		50544F502A17BFA90068097E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50544F522A1BF69F0068097E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50544F4E2A17BC520068097E /* SwiftyDropbox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,9 @@
 		50544F3D2A17B8CE0068097E /* DropboxClient */ = {
 			isa = PBXGroup;
 			children = (
+				50544F4F2A17BCC60068097E /* Info.plist */,
+				50544F502A17BFA90068097E /* AppDelegate.swift */,
+				50544F522A1BF69F0068097E /* SceneDelegate.swift */,
 				50544F3E2A17B8CE0068097E /* DropboxClientApp.swift */,
 				50544F402A17B8CE0068097E /* ContentView.swift */,
 				50544F422A17B8D30068097E /* Assets.xcassets */,
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = DropboxClient;
+			packageProductDependencies = (
+				50544F4D2A17BC520068097E /* SwiftyDropbox */,
+			);
 			productName = DropboxClient;
 			productReference = 50544F3B2A17B8CE0068097E /* DropboxClient.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 50544F322A17B8CE0068097E;
+			packageReferences = (
+				50544F4C2A17BC520068097E /* XCRemoteSwiftPackageReference "SwiftyDropbox" */,
+			);
 			productRefGroup = 50544F3C2A17B8CE0068097E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50544F512A17BFA90068097E /* AppDelegate.swift in Sources */,
 				50544F412A17B8CE0068097E /* ContentView.swift in Sources */,
 				50544F3F2A17B8CE0068097E /* DropboxClientApp.swift in Sources */,
+				50544F532A1BF69F0068097E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +290,7 @@
 				DEVELOPMENT_TEAM = N769D7USYT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DropboxClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +320,7 @@
 				DEVELOPMENT_TEAM = N769D7USYT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DropboxClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50544F4C2A17BC520068097E /* XCRemoteSwiftPackageReference "SwiftyDropbox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dropbox/SwiftyDropbox.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50544F4D2A17BC520068097E /* SwiftyDropbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50544F4C2A17BC520068097E /* XCRemoteSwiftPackageReference "SwiftyDropbox" */;
+			productName = SwiftyDropbox;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50544F332A17B8CE0068097E /* Project object */;
 }
