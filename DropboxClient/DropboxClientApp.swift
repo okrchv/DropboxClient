@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import SwiftyDropbox
 
 @main
 struct DropboxClientApp: App {
-    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
-
+    init() {
+        DropboxClientsManager.setupWithAppKey("ky61jf1mf6pqxd7")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
