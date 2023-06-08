@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftyDropbox
+import ComposableArchitecture
 
 @main
 struct DropboxClientApp: App {
@@ -16,7 +17,11 @@ struct DropboxClientApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(
+                store: Store(initialState: Root.State()) {
+                    Root()
+                }
+            )
         }
     }
 }
